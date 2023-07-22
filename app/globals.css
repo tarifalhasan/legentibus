@@ -18,7 +18,7 @@
 
 body {
   color: rgba(15, 47, 68, 1);
-  background: rgb(var(--background));
+  background: #f7f8f2;
   max-width: 966px;
   margin: 0 auto;
 }
