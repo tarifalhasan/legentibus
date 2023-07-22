@@ -1,10 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: (15, 47, 68, 1);
+  --background: (247, 248, 242, 1);
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -17,11 +17,28 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgba(15, 47, 68, 1);
+  background: rgb(var(--background));
+  max-width: 966px;
+  margin: 0 auto;
+}
+
+@layer components {
+  .bg-hero {
+    background: url(../assets/images/hero.png);
+    @apply min-h-[186px] w-full h-full bg-no-repeat bg-cover;
+  }
+  .explore {
+    background: url(../assets/images/explore.png);
+    @apply min-h-[147px] rounded-xl w-full h-full bg-no-repeat bg-cover;
+  }
+}
+.testimonial_text {
+  font-family: 'EB Garamond', serif !important;
+  font-size: 24px;
+  line-height: 39px;
+  letter-spacing: 2px;
+}
+.shadow-base {
+  box-shadow: 0px 0px 11.999998092651367px 0px rgba(25, 17, 121, 0.1);
 }
